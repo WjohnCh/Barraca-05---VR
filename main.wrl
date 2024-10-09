@@ -1,0 +1,57 @@
+#VRML V2.0 utf8
+
+# Cámara hacia las ventanas en la pared pequeña
+Viewpoint {
+    position 0 10 120
+    orientation 0 1 0 0
+    description "Vista Ventanas en Pared Pequeña"
+}
+
+
+# Cámara a nivel del piso (vista más baja)
+Viewpoint {
+    position 0 0.5 70
+    orientation 0 1 0 0
+    description "Vista a Nivel del Piso"
+}
+
+PROTO Silla [
+    field SFVec3f translation 0 0 0       # Posición de la silla
+    field SFVec3f scale 1 1 1             # Escala de la silla
+    field SFRotation rotation 0 1 0 0     # Rotación de la silla (por defecto sin rotación)
+] {
+    Transform {
+        translation IS translation        # Aplica la traslación
+        scale IS scale                    # Aplica la escala
+        rotation IS rotation              # Aplica la rotación general
+        children [
+            Inline { url "carpeta01.wrl" }
+            Inline { url "carpeta02.wrl" }
+            Inline { url "carpeta03.wrl" }
+            Transform {
+                rotation 1 0 0 1.57       # Rotación específica para carpeta04 (eje X)
+                children [
+                    Inline { url "carpeta04.wrl" }
+                ]
+            }
+            Inline { url "carpeta05.wrl" }
+        ]
+    }
+}
+
+# Uso del PROTO con diferentes valores de traslación, escala y rotación
+Silla {
+    translation 0 -16 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Transform {
+    children [
+        Inline {
+            url "Barraquita.wrl"
+        }
+    ]
+}
+
+
+
