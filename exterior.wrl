@@ -1,0 +1,67 @@
+#VRML V2.0 utf8
+Transform{
+	translation	 7.95 12.44 135.45
+	children[
+		Shape{
+	geometry Box {size 54.95 4 0.01}
+	appearance Appearance {
+		texture	ImageTexture {url ["texturaexterior.jpg"]}
+		}													 
+	}
+	]		
+}
+Transform{
+	translation	 -9.85 11.6 135.451
+	children[
+		Shape{
+	geometry Box {size 5.99 1.85 0.01}
+	appearance Appearance {
+		texture	ImageTexture {url ["letras.png"]}
+		}
+	}
+	]		
+}
+
+PROTO Pared_ext[
+	field SFVec3f posicion 0 0 0
+]{
+	Transform{
+	translation	IS posicion
+	children[
+		Shape{
+	geometry Box {size 12.25 12.49 0.01} 
+	appearance Appearance {
+		texture	ImageTexture {url ["texturaexterior.jpg"]}
+		}
+	}
+	]		
+}
+}
+
+PROTO Palo_ext[
+	field SFVec3f posicion 0 0 0
+	field SFVec3f size 0 0 0 
+
+]{
+	Transform {
+		translation	IS posicion
+		children[
+			Shape{
+				geometry Box {size IS size }
+				appearance Appearance {
+					texture	ImageTexture { url["texturaexterior.jpg"]}
+				}
+			}
+		]
+	}
+}					 
+
+
+Pared_ext {posicion 4.85 -8.05 135.45}
+Pared_ext {posicion 17.08 -8.05 135.45}
+Pared_ext {posicion 29.31 -8.05 135.45}
+
+
+Palo_ext {posicion -1.41 -1.9 135.45 size 0.36 24.81 0.01}
+Palo_ext {posicion 34.92 4.3 135.45  size 1 12.4 0.01}
+Palo_ext {posicion -19.05 -1.9 135.45 size 1 24.81 0.01}
