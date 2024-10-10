@@ -1,0 +1,139 @@
+#VRML V2.0 utf8
+
+PROTO Madera [
+    field SFVec3f size 0.2 0.2 2.1  
+    field SFVec3f posicion 0 0 0  
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+					texture	ImageTexture {
+						url	"madera.jpg"
+					}
+                }
+                geometry Box {
+                    size IS size
+                }
+            }	
+        ]
+    }
+}
+
+PROTO Tornillo [
+    field SFVec3f posicion 0 0 0   
+    field SFColor color 0.55 0.47 0.14  
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+                    material Material {
+                        diffuseColor IS color
+                    }
+                }
+                geometry Cylinder {
+                    radius 0.05   
+                    height 0.1    
+                }
+            }
+            Transform {
+                translation 0 0.05 0 
+                children [
+                    Shape {
+                        appearance Appearance {
+                            material Material {
+                                diffuseColor IS color
+                            }
+                        }
+                        geometry Cylinder {
+                            radius 0.05  
+                            height 0.03 
+                        }
+                    }
+                    Transform {
+                        translation 0 0.01 0  
+                        children [
+                            
+                            Shape {
+                                appearance Appearance {
+                                    material Material {
+                                        diffuseColor 0 0 0  
+                                    }
+                                }
+                                geometry Box {
+                                    size 0.01 0.004 0.05  
+                                }
+                            }
+                         
+                            Shape {
+                                appearance Appearance {
+                                    material Material {
+                                        diffuseColor 0 0 0 
+                                    }
+                                }
+                                geometry Box {
+                                    size 0.05 0.004 0.01  
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+PROTO Techo [
+    field SFVec3f size 10.62 0.1 27.006 
+    field SFVec3f posicion 0 0 0
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+                    texture ImageTexture {
+                        url "tecnopor.jpg"
+                    }
+                }
+                geometry Box {
+                    size IS size
+                }
+            }
+            Madera { posicion -5.31 0 0 size 0.2 0.2 27.106 }   
+            Madera { posicion 5.31 0 0 size 0.2 0.2 27.106 }    
+            Madera { posicion 0 0 -13.503 size 10.62 0.2 0.2 }  
+            Madera { posicion 0 0 13.503 size 10.62 0.2 0.2 }   
+			# 1
+			Tornillo { posicion -5.31 0.1 -13.503 }  
+			Tornillo { posicion -3.53 0.1 -13.503 }  
+			Tornillo { posicion -1.77 0.1 -13.503 }  
+			Tornillo { posicion 0.0 0.1 -13.503 }    
+			Tornillo { posicion 1.77 0.1 -13.503 }   
+			Tornillo { posicion 3.53 0.1 -13.503 }  
+			Tornillo { posicion 5.31 0.1 -13.503 }  
+			# 2
+			Tornillo { posicion -5.31 0.1 13.503 }   
+			Tornillo { posicion -3.53 0.1 13.503 }   
+			Tornillo { posicion -1.77 0.1 13.503 }   
+			Tornillo { posicion 0.0 0.1 13.503 }    
+			Tornillo { posicion 1.77 0.1 13.503 }    
+			Tornillo { posicion 3.53 0.1 13.503 }    
+			Tornillo { posicion 5.31 0.1 13.503 }    
+            # 3
+			Tornillo { posicion 5.31 0.1 0.05 }      
+			Tornillo { posicion 5.31 0.1 1.77 }     
+			Tornillo { posicion 5.31 0.1 -1.77 }     
+            # 4
+			Tornillo { posicion -5.31 0.1 0.05 }     
+			Tornillo { posicion -5.31 0.1 1.77 }     
+			Tornillo { posicion -5.31 0.1 -1.77 }    
+        ]
+    }
+}
+
+Techo { posicion 0 0 0 }

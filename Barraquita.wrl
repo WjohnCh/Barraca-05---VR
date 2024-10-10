@@ -1,7 +1,208 @@
 #VRML V2.0 utf8
 
+PROTO Canaletas [
+  field SFVec3f scale 1 1 1
+  field SFVec3f posicion 0 0 0
+] {
+  Transform {
+    scale IS scale
+    translation IS posicion
+	rotation 0.3015 180.9045 0.3015 1.5708
+    children [
+      Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"canaleta.jpg"
+			}
+        }
+        geometry IndexedFaceSet {
+          creaseAngle 0.5
+          solid FALSE
+          coord Coordinate {
+            point
+            [
+            3.5 -0.278213 2, -3.5 -0.278215 2, 3.5 -0.222437 1.32762, 3.5 -0.222437 1.45099, 
+            3.5 -0.222437 0.712229, 3.5 -0.222437 0.835601, 3.5 -0.222437 0.0968452, 3.5 -0.222437 0.220217, 
+            3.5 -0.222437 -0.518539, 3.5 -0.222437 -0.395169, 3.5 -0.222437 -1.13392, 3.5 -0.222437 -1.01055, 
+            3.5 -0.222637 -1.75003, 3.5 -0.222437 -1.62594, -3.5 -0.222439 -1.62594, -3.5 -0.222639 -1.75002, 
+            -3.5 -0.222439 -1.01055, -3.5 -0.222439 -1.13392, -3.5 -0.222439 -0.395167, -3.5 -0.222439 -0.518537, 
+            -3.5 -0.222439 0.220219, -3.5 -0.222439 0.0968468, -3.5 -0.222439 0.835603, -3.5 -0.222439 0.712231, 
+            -3.5 -0.222439 1.45099, -3.5 -0.222439 1.32762, 3.5 -0.155587 1.54543, 3.5 -0.157981 1.84154, 
+            3.5 -0.122879 1.61443, 3.5 -0.111849 1.69494, 3.5 -0.124175 1.77469, 3.5 -0.155587 0.930041, 
+            3.5 -0.155587 1.23318, 3.5 -0.122697 0.999581, 3.5 -0.111148 1.08161, 3.5 -0.122697 1.16364, 
+            3.5 -0.155587 0.314657, 3.5 -0.155587 0.617789, 3.5 -0.122697 0.384195, 3.5 -0.111148 0.466223, 
+            3.5 -0.122697 0.548251, 3.5 -0.155587 -0.300729, 3.5 -0.155587 0.00240518, 3.5 -0.122697 -0.231189, 
+            3.5 -0.111148 -0.149161, 3.5 -0.122697 -0.0671348, 3.5 -0.155587 -0.916113, 3.5 -0.155587 -0.612979, 
+            3.5 -0.122697 -0.846573, 3.5 -0.111148 -0.764547, 3.5 -0.122697 -0.682519, 3.5 -0.155587 -1.5315, 
+            3.5 -0.155587 -1.22836, 3.5 -0.122697 -1.46196, 3.5 -0.111148 -1.37993, 3.5 -0.122697 -1.2979, 
+            -3.5 -0.155589 -1.22836, -3.5 -0.155589 -1.5315, -3.5 -0.122699 -1.2979, -3.5 -0.11115 -1.37993, 
+            -3.5 -0.122699 -1.46196, -3.5 -0.155589 -0.612977, -3.5 -0.155589 -0.916111, -3.5 -0.122699 -0.682517, 
+            -3.5 -0.11115 -0.764545, -3.5 -0.122699 -0.846571, -3.5 -0.155589 0.00240679, -3.5 -0.155589 -0.300727, 
+            -3.5 -0.122699 -0.0671332, -3.5 -0.11115 -0.149159, -3.5 -0.122699 -0.231187, -3.5 -0.155589 0.617791, 
+            -3.5 -0.155589 0.314659, -3.5 -0.122699 0.548253, -3.5 -0.11115 0.466225, -3.5 -0.122699 0.384197, 
+            -3.5 -0.155589 1.23318, -3.5 -0.155589 0.930043, -3.5 -0.122699 1.16364, -3.5 -0.11115 1.08161, 
+            -3.5 -0.122699 0.999583, -3.5 -0.157983 1.84155, -3.5 -0.155589 1.54543, -3.5 -0.124177 1.77469, 
+            -3.5 -0.111851 1.69494, -3.5 -0.122881 1.61443
+          ]
+          }
+          
+          coordIndex
+          [
+          3,24,82,-1, 3,82,26,-1, 13,14,57,-1, 13,57,51,-1, 52,56,17,-1, 52,17,10,-1, 
+          11,16,62,-1, 11,62,46,-1, 47,61,19,-1, 47,19,8,-1, 9,18,67,-1, 9,67,41,-1, 
+          42,66,21,-1, 42,21,6,-1, 7,20,72,-1, 7,72,36,-1, 37,71,23,-1, 37,23,4,-1, 
+          5,22,77,-1, 5,77,31,-1, 14,13,12,-1, 14,12,15,-1, 16,11,10,-1, 16,10,17,-1, 
+          18,9,8,-1, 18,8,19,-1, 20,7,6,-1, 20,6,21,-1, 22,5,4,-1, 22,4,23,-1, 
+          24,3,2,-1, 24,2,25,-1, 32,76,25,-1, 32,25,2,-1, 56,52,55,-1, 56,55,58,-1, 
+          58,55,54,-1, 58,54,59,-1, 59,54,53,-1, 59,53,60,-1, 60,53,51,-1, 60,51,57,-1, 
+          61,47,50,-1, 61,50,63,-1, 63,50,49,-1, 63,49,64,-1, 64,49,48,-1, 64,48,65,-1, 
+          65,48,46,-1, 65,46,62,-1, 66,42,45,-1, 66,45,68,-1, 68,45,44,-1, 68,44,69,-1, 
+          69,44,43,-1, 69,43,70,-1, 70,43,41,-1, 70,41,67,-1, 71,37,40,-1, 71,40,73,-1, 
+          73,40,39,-1, 73,39,74,-1, 74,39,38,-1, 74,38,75,-1, 75,38,36,-1, 75,36,72,-1, 
+          76,32,35,-1, 76,35,78,-1, 78,35,34,-1, 78,34,79,-1, 79,34,33,-1, 79,33,80,-1, 
+          80,33,31,-1, 80,31,77,-1, 81,27,30,-1, 81,30,83,-1, 83,30,29,-1, 83,29,84,-1, 
+          84,29,28,-1, 84,28,85,-1, 85,28,26,-1, 85,26,82,-1, 27,81,1,-1, 27,1,0,-1
+        ]
+        }
+      }
+    ]
+  }
+}
 
+PROTO Madera [
+    field SFVec3f size 0.2 0.2 2.1  
+    field SFVec3f posicion 0 0 0  
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+					texture	ImageTexture {
+						url	"madera.jpg"
+					}
+                }
+                geometry Box {
+                    size IS size
+                }
+            }	
+        ]
+    }
+}
 
+PROTO Tornillo [
+    field SFVec3f posicion 0 0 0   
+    field SFColor color 0.55 0.47 0.14  
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+                    material Material {
+                        diffuseColor IS color
+                    }
+                }
+                geometry Cylinder {
+                    radius 0.05   
+                    height 0.1    
+                }
+            }
+            Transform {
+                translation 0 0.05 0 
+                children [
+                    Shape {
+                        appearance Appearance {
+                            material Material {
+                                diffuseColor IS color
+                            }
+                        }
+                        geometry Cylinder {
+                            radius 0.05  
+                            height 0.03 
+                        }
+                    }
+                    Transform {
+                        translation 0 0.01 0  
+                        children [
+                            
+                            Shape {
+                                appearance Appearance {
+                                    material Material {
+                                        diffuseColor 0 0 0  
+                                    }
+                                }
+                                geometry Box {
+                                    size 0.01 0.004 0.05  
+                                }
+                            }
+                         
+                            Shape {
+                                appearance Appearance {
+                                    material Material {
+                                        diffuseColor 0 0 0 
+                                    }
+                                }
+                                geometry Box {
+                                    size 0.05 0.004 0.01  
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+PROTO Techo [
+    field SFVec3f size 10.62 0.1 27.006 
+    field SFVec3f posicion 0 0 0
+] {
+    Transform {
+        translation IS posicion
+        children [
+            Shape {
+                appearance Appearance {
+                    texture ImageTexture {
+                        url "tecnopor.jpg"
+                    }
+                }
+                geometry Box {
+                    size IS size
+                }
+            }
+            Madera { posicion -5.31 0 0 size 0.2 0.2 27.106 }   
+            Madera { posicion 5.31 0 0 size 0.2 0.2 27.106 }    
+            Madera { posicion 0 0 -13.503 size 10.62 0.2 0.2 }  
+            Madera { posicion 0 0 13.503 size 10.62 0.2 0.2 }   
+			# 1
+			Tornillo { posicion -5.31 0.1 -13.503 }  
+			Tornillo { posicion -3.53 0.1 -13.503 }  
+			Tornillo { posicion -1.77 0.1 -13.503 }  
+			Tornillo { posicion 0.0 0.1 -13.503 }    
+			Tornillo { posicion 1.77 0.1 -13.503 }   
+			Tornillo { posicion 3.53 0.1 -13.503 }  
+			Tornillo { posicion 5.31 0.1 -13.503 }  
+			# 2
+			Tornillo { posicion -5.31 0.1 13.503 }   
+			Tornillo { posicion -3.53 0.1 13.503 }   
+			Tornillo { posicion -1.77 0.1 13.503 }   
+			Tornillo { posicion 0.0 0.1 13.503 }    
+			Tornillo { posicion 1.77 0.1 13.503 }    
+			Tornillo { posicion 3.53 0.1 13.503 }    
+			Tornillo { posicion 5.31 0.1 13.503 }    
+            # 3
+			Tornillo { posicion 5.31 0.1 0.05 }      
+			Tornillo { posicion 5.31 0.1 1.77 }     
+			Tornillo { posicion 5.31 0.1 -1.77 }     
+            # 4
+			Tornillo { posicion -5.31 0.1 0.05 }     
+			Tornillo { posicion -5.31 0.1 1.77 }     
+			Tornillo { posicion -5.31 0.1 -1.77 }    
+        ]
+    }
+}
 
 PROTO Clavo [
   field SFColor colorClavo 1 1 0
@@ -543,3 +744,64 @@ Palo {posicion -19.05 1 134.930 size 1 28.81 1}
 																   
 Piso_Techo {size 53.1 135.03 0.8 posicion 7.9 -13 67.75 textura "texturapiso.jpg"} #piso
 Piso_Techo {size 53.1 135.40 0.8 posicion 7.9 15.045 67.50 textura "texturapiso2.jpg"} #techo
+
+#Techo Filas
+Techo { posicion -13.2 14.6 14 }
+Techo { posicion -2.6 14.6 14 }
+Techo { posicion 8 14.6 14 }
+Techo { posicion 18.6 14.6 14 }
+Techo { posicion 29.2 14.6 14 }
+#Techo Columnas
+Techo { posicion -13.2 14.6 41 }
+Techo { posicion -13.2 14.6 68 }
+Techo { posicion -13.2 14.6 95 }
+Techo { posicion -13.2 14.6 122 }
+#Techo Matriz
+Techo { posicion -2.6 14.6 41 }
+Techo { posicion 8 14.6 41 }
+Techo { posicion 18.6 14.6 41 }
+Techo { posicion 29.2 14.6 41 }
+Techo { posicion -2.6 14.6 68 }
+Techo { posicion 8 14.6 68 }
+Techo { posicion 18.6 14.6 68 }
+Techo { posicion 29.2 14.6 68 }
+Techo { posicion -2.6 14.6 95 }
+Techo { posicion 8 14.6 95 }
+Techo { posicion 18.6 14.6 95 }
+Techo { posicion 29.2 14.6 95 }
+Techo { posicion -2.6 14.6 122 }
+Techo { posicion 8 14.6 122 }
+Techo { posicion 18.6 14.6 122 }
+Techo { posicion 29.2 14.6 122 }
+
+# Canaletas Filas
+Canaletas { scale 4.5 1 4.5 posicion -13.7 15.9 14.5 }
+Canaletas { scale 4.5 1 4.5 posicion -3.1 15.9 14.5 }
+Canaletas { scale 4.5 1 4.5 posicion 7.5 15.9 14.5 }
+Canaletas { scale 4.5 1 4.5 posicion 18.1 15.9 14.5 }
+Canaletas { scale 4.5 1 4.5 posicion 28.7 15.9 14.5 }
+
+# Canaletas Columnas
+Canaletas { scale 4.5 1 4.5 posicion -13.7 15.9 41.5 }
+Canaletas { scale 4.5 1 4.5 posicion -13.7 15.9 68.5 }
+Canaletas { scale 4.5 1 4.5 posicion -13.7 15.9 95.5 }
+Canaletas { scale 4.5 1 4.5 posicion -13.7 15.9 122.5 }
+
+# Canaletas Matriz
+Canaletas { scale 4.5 1 4.5 posicion -3.1 15.9 41.5 }
+Canaletas { scale 4.5 1 4.5 posicion 7.5 15.9 41.5 }
+Canaletas { scale 4.5 1 4.5 posicion 18.1 15.9 41.5 }
+Canaletas { scale 4.5 1 4.5 posicion 28.7 15.9 41.5 }
+Canaletas { scale 4.5 1 4.5 posicion -3.1 15.9 68.5 }
+Canaletas { scale 4.5 1 4.5 posicion 7.5 15.9 68.5 }
+Canaletas { scale 4.5 1 4.5 posicion 18.1 15.9 68.5 }
+Canaletas { scale 4.5 1 4.5 posicion 28.7 15.9 68.5 }
+Canaletas { scale 4.5 1 4.5 posicion -3.1 15.9 95.5 }
+Canaletas { scale 4.5 1 4.5 posicion 7.5 15.9 95.5 }
+Canaletas { scale 4.5 1 4.5 posicion 18.1 15.9 95.5 }
+Canaletas { scale 4.5 1 4.5 posicion 28.7 15.9 95.5 }
+Canaletas { scale 4.5 1 4.5 posicion -3.1 15.9 122.5 }
+Canaletas { scale 4.5 1 4.5 posicion 7.5 15.9 122.5 }
+Canaletas { scale 4.5 1 4.5 posicion 18.1 15.9 122.5 }
+Canaletas { scale 4.5 1 4.5 posicion 28.7 15.9 122.5 }
+
