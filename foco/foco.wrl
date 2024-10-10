@@ -1,0 +1,175 @@
+#VRML V2.0 utf8
+
+
+PROTO CustomObject [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 0 0 0
+  field SFVec3f scale 1 1 1
+] {
+  Transform {
+    translation IS translation
+    rotation IS rotation
+    scale IS scale
+    children [
+      Transform {
+		translation	0 0 0
+		rotation 1 0 0 1.5708
+        children [
+    	  Shape {
+        	geometry Cylinder { radius 0.08 height 3 }
+        	appearance Appearance {
+        	  material Material {
+            	diffuseColor 0 0 0
+            	emissiveColor 1.0 1.0 1.0
+        	  }
+        	}
+    	  }
+        ]
+      },
+      Transform {
+        translation 0.18 0 0
+        rotation 1 0 0 1.5708
+        children [
+          Shape {
+            geometry Cylinder { radius 0.08 height 3 }
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 0 0
+                emissiveColor 1.0 1.0 1.0
+              }
+            }
+          }
+        ]
+      },
+      Transform {
+        rotation 1 0 0 1.5708
+        translation 0.09 0.3 0
+        children [
+          Shape {
+            geometry Box { size 0.4 3.1 0.25 }
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.99 0.99 0.99
+                shininess 0.9
+              }
+              texture ImageTexture {
+                  url "foco_caja.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Transform {
+        translation 0.09 0.17 1.55
+        children [
+          Shape {
+            geometry Box { size 0.4 0.5 0.01 }
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.99 0.99 0.99
+                shininess 0.9
+              }
+              texture ImageTexture {
+                url "foco_caja.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Transform {
+        translation 0.09 0.17 -1.55
+        children [
+          Shape {
+            geometry Box { size 0.4 0.5 0.01 }
+            appearance Appearance {
+              material Material {
+                diffuseColor 0.99 0.99 0.99
+                shininess 0.9
+              }
+              texture ImageTexture {
+                url "foco_caja.jpg"
+              }
+            }
+          }
+        ]
+      },
+      Transform {
+        translation 0 -0.15 1.51
+        rotation 0 1 0 1.57
+        children [
+          Inline {
+            url "foco1.wrl"
+          }
+        ]
+      },
+      Transform {
+        translation 0.18 -0.15 1.51
+        rotation 0 1 0 1.57
+        children [
+          Inline {
+            url "foco1.wrl"
+          }
+        ]
+      },
+      Transform {
+        translation 0.18 -0.15 -1.51
+        rotation 0 1 0 1.57
+        children [
+          Inline {
+            url "foco1.wrl"
+          }
+        ]
+      },
+      Transform {
+        translation 0 -0.15 -1.51
+        rotation 0 1 0 1.57
+        children [
+          Inline {
+            url "foco1.wrl"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+CustomObject {
+  translation 18.5 13.2 50
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+CustomObject {
+  translation -2.6 13.2 50
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+CustomObject {
+  translation 18.5 13.2 80
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+CustomObject {
+  translation -2.6 13.2 80
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+CustomObject {
+  translation 18.5 13.2 110
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+CustomObject {
+  translation -2.6 13.2 110
+  rotation 0 1 0 1.57
+  scale 2 3 3.4
+}
+
+
+
+
+

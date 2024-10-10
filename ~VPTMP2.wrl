@@ -1,0 +1,71 @@
+#VRML V2.0 utf8
+
+
+Viewpoint{
+position -16 14 134
+orientation 0 -0.5 0 0.785398
+description "Vista Ventanas en Pared Pequeña"
+}
+
+
+
+Viewpoint{
+position 0 0.5 70
+orientation 0 1 0 0
+description "Vista a Nivel del Piso"
+}
+
+
+
+Transform{
+children[
+Inline{
+url "Barraquita.wrl"
+}
+]
+}
+Transform{
+translation 0 0 0
+children[
+Inline{
+url "pizarra.wrl"
+}
+]
+}
+Transform{
+translation 0 0 0
+children[
+Inline{
+url "Imagenes.wrl"
+}
+]
+}
+
+Transform{
+translation 0 0 0
+children[
+Inline{
+url "carpeta/Conjunto_carpetas.wrl"
+}
+]
+}
+
+Transform{
+translation 0 1 0
+children[
+Inline{
+url "exterior.wrl"
+}
+]
+}
+
+Transform{
+children[
+Inline{
+url "foco/foco.wrl"
+}
+]
+}
+
+
+
