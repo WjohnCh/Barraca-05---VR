@@ -1,0 +1,300 @@
+#VRML V2.0 utf8
+
+PROTO Silla [
+    field SFVec3f translation 0 0 0       # Posición de la silla
+    field SFVec3f scale 1 1 1             # Escala de la silla
+    field SFRotation rotation 0 1 0 0     # Rotación de la silla (por defecto sin rotación)
+] {
+    Transform {
+        translation IS translation        # Aplica la traslación
+        scale IS scale                    # Aplica la escala
+        rotation IS rotation              # Aplica la rotación general
+        children [
+            Inline { url "carpeta01.wrl" }
+            Inline { url "carpeta02.wrl" }
+            Inline { url "carpeta03.wrl" }
+            Transform {
+                rotation 1 0 0 1.57       # Rotación específica para carpeta04 (eje X)
+                children [
+                    Inline { url "carpeta04.wrl" }
+                ]
+            }
+            Inline { url "carpeta05.wrl" }
+        ]
+    }
+}
+
+# Uso del PROTO con diferentes valores de traslación, escala y rotación
+Silla {
+    translation 19.5 -16.2 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -10.5 -16.2 8
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+
+
+#//// 2DA FILA ////
+Silla {
+    translation 19.5 -16.2 24
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 24
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 24
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 24
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -10.5 -16.2 24
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+
+#//// 3era FILA	///
+Silla {
+    translation 19.5 -16.2 29
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 29
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 29
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 29
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -10.5 -16.2 29
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+
+#//// 4rta FILA	///
+Silla {
+    translation 19.5 -16.2 45
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 45
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 45
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 45
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -10.5 -16.2 47.5
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 5Ta FILA ///
+Silla {
+    translation 19.5 -16.2 50
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 50
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 50
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 50
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 6Ta FILA ///
+Silla {
+    translation 19.5 -16.2 66
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 66
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 66
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 66
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation -10.5 -16.2 68.5
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 7Ma FILA ///
+Silla {
+    translation 19.5 -16.2 71
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 71
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 71
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 71
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 8Ta FILA ///
+Silla {
+    translation 19.5 -16.2 82
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 82
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 82
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 82
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 9Ma FILA ///
+Silla {
+    translation 19.5 -16.2 87
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 12 -16.2 87
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 4.5 -16.2 87
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -3 -16.2 87
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 10Ta FILA ///
+Silla {
+    translation 19.5 -16.2 103
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 11 -16.2 103
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 2 -16.2 103
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -7 -16.2 103
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+#//// 11Ma FILA ///
+Silla {
+    translation 19.5 -16.2 108
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}Silla {
+    translation 11 -16.2 108
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+Silla {
+    translation 2 -16.2 108
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}
+
+Silla {
+    translation -7 -16.2 108
+    scale 0.6 0.6 0.6
+    rotation 0 -1 0 1.57  # Sin rotación adicional
+}

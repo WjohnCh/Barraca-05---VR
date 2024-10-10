@@ -2,8 +2,8 @@
 
 # Cámara hacia las ventanas en la pared pequeña
 Viewpoint {
-    position 0 10 120
-    orientation 0 1 0 0
+    position -16 14 134
+    orientation 0 -0.5 0 0.785398
     description "Vista Ventanas en Pared Pequeña"
 }
 
@@ -15,36 +15,8 @@ Viewpoint {
     description "Vista a Nivel del Piso"
 }
 
-PROTO Silla [
-    field SFVec3f translation 0 0 0       # Posición de la silla
-    field SFVec3f scale 1 1 1             # Escala de la silla
-    field SFRotation rotation 0 1 0 0     # Rotación de la silla (por defecto sin rotación)
-] {
-    Transform {
-        translation IS translation        # Aplica la traslación
-        scale IS scale                    # Aplica la escala
-        rotation IS rotation              # Aplica la rotación general
-        children [
-            Inline { url "carpeta01.wrl" }
-            Inline { url "carpeta02.wrl" }
-            Inline { url "carpeta03.wrl" }
-            Transform {
-                rotation 1 0 0 1.57       # Rotación específica para carpeta04 (eje X)
-                children [
-                    Inline { url "carpeta04.wrl" }
-                ]
-            }
-            Inline { url "carpeta05.wrl" }
-        ]
-    }
-}
 
-# Uso del PROTO con diferentes valores de traslación, escala y rotación
-Silla {
-    translation 0 -16 8
-    scale 0.6 0.6 0.6
-    rotation 0 -1 0 1.57  # Sin rotación adicional
-}
+
 Transform {
     children [
         Inline {
@@ -53,7 +25,7 @@ Transform {
     ]
 }
 Transform {
-    translation 0 1 0
+    translation 0 0 0
     children [
         Inline{
 			url "pizarra.wrl"
@@ -61,10 +33,19 @@ Transform {
     ]
 }
 Transform {
-    translation 0 1 0
+    translation 0 0 0
     children [
         Inline{
 			url "Imagenes.wrl"
+        }
+    ]
+}
+
+Transform {
+    translation 0 0 0
+    children [
+        Inline{
+			url "Conjunto_carpetas.wrl"
         }
     ]
 }
@@ -77,6 +58,3 @@ Transform {
         }
     ]
 }
-
-
-
