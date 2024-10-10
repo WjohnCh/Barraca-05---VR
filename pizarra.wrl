@@ -1,0 +1,52 @@
+#VRML V2.0 utf8
+
+PROTO Marco_P[
+  field SFVec3f posicion 0 0 0
+  field MFString textura ["texturamarco.jpg"]
+  field SFVec3f size 0.42 11.1 0.25
+  field	SFRotation rotacion 0 0 0 0
+]{
+  Transform{
+    translation IS posicion
+    rotation IS	rotacion
+    children [Shape {
+      geometry Box{size IS size}
+      appearance Appearance {
+        texture ImageTexture {url IS textura}
+      }
+    }]
+  }
+}
+
+PROTO Pizarra[
+  field SFVec3f posicion 0 0 0
+  field MFString textura ["imagen.jpg"]
+  field SFVec3f size 23.88 11.1 0.1
+]{
+  Transform{
+    translation IS posicion
+    rotation 0 1 0 1.57
+    children [Shape {
+      geometry Box { size IS size }
+      appearance Appearance {
+        texture ImageTexture { url IS textura }
+      }
+    }
+ 	]
+  }
+
+}
+
+# Primera Pizarra subida 0.5 unidades en Y
+Pizarra { posicion 34.4 0.5 65.305 size 23.88 11.1 0.1 textura "texturapizarra2.jpg" }
+Marco_P { posicion 34.3 6.2 65.305 size 23.88 0.42 0.25 textura ["texturamarco.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 -5.2 65.305 size 23.88 0.42 0.25 textura ["texturamarco.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 0.5 53.205 size 0.42 11.82 0.25 textura ["texturamarco.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 0.5 77.405 size 0.42 11.82 0.25 textura ["texturamarco.jpg"] rotacion 0 1 0 1.57 }
+
+# Segunda Pizarra ajustada a la misma altura que la primera (Y = 0.5)
+Pizarra { posicion 34.4 0.3 91.305 size 26.95 12 0.1 textura "texturapizarra1.jpg" }
+Marco_P { posicion 34.3 6.4 91.305 size 26.95 0.18 0.20 textura ["texturamarco2.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 -5.75 91.305 size 26.95 0.18 0.20 textura ["texturamarco2.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 0.337 77.73 size 0.18 12.331 0.20 textura ["texturamarco2.jpg"] rotacion 0 1 0 1.57 }
+Marco_P { posicion 34.3 0.337 104.86 size 0.18 12.331 0.20 textura ["texturamarco2.jpg"] rotacion 0 1 0 1.57 }

@@ -52,6 +52,23 @@ Transform {
         }
     ]
 }
+Transform {
+    translation 0 1 0
+    children [
+        Inline{
+			url "pizarra.wrl"
+        }
+    ]
+}
+Transform {
+    translation 0 1 0
+    children [
+        Inline{
+			url "Imagenes.wrl"
+        }
+    ]
+}
+
 
 
 
