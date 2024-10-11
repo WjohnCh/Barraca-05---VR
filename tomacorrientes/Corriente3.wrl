@@ -1,0 +1,68 @@
+#VRML V2.0 utf8
+PROTO BaseEnchufe [
+  field SFVec3f translation 0 0 0
+  field SFVec3f size 3 2 0.2 
+  field SFColor color 0.9 0.9 0.9
+] {
+  Transform {
+    translation IS translation
+    rotation 0 1 0 1.57  # Rotación 90 grados hacia la derecha
+    children [
+      Shape {
+        appearance Appearance {
+          material Material {
+			  emissiveColor 0.9 0.9 0.9
+            diffuseColor IS color
+          }
+        }
+        geometry Box {
+          size IS size
+        }
+      }
+    ]
+  }
+}
+
+# PROTO para el conector
+PROTO Conector [
+  field SFVec3f translation 0 0 0
+  field SFVec3f size 0.05 0.02 0.3  # Ajuste del tamaño para que esté en vertical
+] {
+  Transform {
+    translation IS translation
+    rotation 0 0 1 1.57  # Rotación 90 grados para orientar en vertical
+    children [
+      Shape {
+        appearance Appearance {
+          material Material {
+            diffuseColor 0 0 0
+          }
+        }
+        geometry Box {
+          size IS size
+        }
+      }
+    ]
+  }
+}
+
+# Enchufe con conectores verticales pegados al borde izquierdo
+BaseEnchufe {
+  translation 0 0 0
+  size 3 2 0.2
+  color 0.9 0.9 0.9
+}
+
+BaseEnchufe {
+  translation 0 0 0.1
+  size 2.5 1.5 0.05
+  color 0.8 0.8 0.8
+}
+
+Conector {
+  translation -0.2 0.5 0.15  # Más pegada al rectángulo en la parte superior
+}
+
+Conector {
+  translation -0.2 -0.5 0.15  # Más pegada al rectángulo en la parte inferior
+}

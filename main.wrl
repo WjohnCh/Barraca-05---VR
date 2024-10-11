@@ -1,7 +1,6 @@
 #VRML V2.0 utf8
 
 # Cámara hacia las ventanas en la pared pequeña
-
 NavigationInfo { headlight FALSE }
 
 Viewpoint {
@@ -50,64 +49,11 @@ Inline{
 	url "foco/foco.wrl"
 }
 
+Inline{
+	url "tomacorrientes/tomacorrientes.wrl"
+}
 
 
- PointLight { 
-location 18.5 13.2 10
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location  -2.6 13.2 10
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location 18.5 13.2 50
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location  -2.6 13.2 50
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location 18.5 13.2 80
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location -2.6 13.2 80
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location 18.5 13.2 110
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
-PointLight { 
-location -2.6 13.2 110
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
-}
 
      
 

@@ -1,0 +1,19 @@
+#VRML V2.0 utf8
+
+Transform {
+  translation 0 0 0  # Posición del cilindro
+  children [
+    Shape {
+      geometry Cylinder {
+        radius 0.03  # Ajusta este valor para el ancho (grosor) de la línea
+        height 5    # Ajusta este valor para la longitud de la línea
+      }
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1  # Blanco
+          emissiveColor 1 1 1 # Blanco brillante
+        }
+      }
+    }
+  ]
+}
