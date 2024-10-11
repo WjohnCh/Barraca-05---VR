@@ -1,0 +1,84 @@
+#VRML V2.0 utf8
+Viewpoint {
+    position 0 0.5 70
+    orientation 0 1 0 3.14159
+    description "Vista a Nivel del Piso"
+}
+
+DEF SwitchCortinas Switch {
+    whichChoice 0  # Comienza mostrando el grupo de cortinas 1 y 2
+    choice [
+        # Grupo de cortinas 1 y 2
+        Group {
+            children [
+                Transform {
+                    translation 25 5  133.2
+                    rotation 0 1 0 1.5708
+                    scale 10 9 12
+                    children [
+                        Inline { url "Cortina.wrl" }
+                        DEF cortina1 TouchSensor {}
+                    ]
+                }
+                Transform {
+                    translation 7 5  133.2
+                    rotation 0 1 0 1.5708
+                    scale 10 9 12
+                    children [
+                        Inline { url "Cortina.wrl" }
+                        DEF cortina2 TouchSensor {}
+                    ]
+                }
+            ]
+        },
+        # Grupo de cortinas 3 y 4
+        Group {
+            children [
+                Transform {
+                    translation 30.9 5  133.2
+                    rotation 0 1 0 1.5708
+                    scale 10 9 3
+                    children [
+                        Inline { url "Cortina.wrl" }
+                        DEF cortina3 TouchSensor {}
+                    ]
+                }
+                Transform {
+                    translation 1.9 5  133.2
+                    rotation 0 1 0 1.5708
+                    scale 10 9 3
+                    children [
+                        Inline { url "Cortina.wrl" }
+                        DEF cortina4 TouchSensor {}
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+# Script para alternar la visibilidad entre el grupo 1 y 2 y el grupo 3 y 4
+DEF ToggleCortinasScript Script {
+    eventIn SFBool click
+    eventOut SFInt32 cortinaState
+
+    field SFBool isGroup1 TRUE  # Inicialmente muestra el grupo 1 (cortinas 1 y 2)
+
+    url "javascript:
+        function click(isActive) {
+            if (isActive) {
+                isGroup1 = !isGroup1;
+                cortinaState = isGroup1 ? 0 : 1;  // 0 para mostrar grupo 1 y 2, 1 para mostrar grupo 3 y 4
+            }
+        }
+    "
+}
+
+# ROUTEs para conectar el sensor de cada cortina al Script
+ROUTE cortina1.isActive TO ToggleCortinasScript.click
+ROUTE cortina2.isActive TO ToggleCortinasScript.click
+ROUTE cortina3.isActive TO ToggleCortinasScript.click
+ROUTE cortina4.isActive TO ToggleCortinasScript.click
+
+# ROUTE para actualizar el estado del Switch con el valor de salida del Script
+ROUTE ToggleCortinasScript.cortinaState TO SwitchCortinas.whichChoice
