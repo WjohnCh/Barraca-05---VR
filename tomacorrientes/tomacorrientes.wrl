@@ -72,56 +72,56 @@ DEF luz1 PointLight {
     radius 50
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz2 PointLight { 
     location -2.6 13.2 10
     radius 50
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz3 PointLight { 
     location 18.5 13.2 50
     radius 50
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz4 PointLight { 
     location -2.6 13.2 50
     radius 50
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz5 PointLight { 
     location 18.5 13.2 80
     radius 40
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz6 PointLight { 
     location -2.6 13.2 80
     radius 40
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz7 PointLight { 
     location 18.5 13.2 110
     radius 40
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 DEF luz8 PointLight { 
     location -2.6 13.2 110
     radius 40
     ambientIntensity 0.1
     intensity 0.4
-    attenuation 0 0 0 
+    attenuation 0 0.2 0 
 }
 
 DEF MiScript Script {

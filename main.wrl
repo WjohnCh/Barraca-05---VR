@@ -1,5 +1,6 @@
 #VRML V2.0 utf8
 # Cámara a nivel del piso (vista más baja)
+NavigationInfo { headlight FALSE }
 
 DirectionalLight {
 	ambientIntensity 0.9
@@ -7,43 +8,84 @@ DirectionalLight {
 	intensity 1 # Intensidad de la luz ambiente
 	direction -0.5 -1 -0.5
 }
-
 Viewpoint {
     position 8 1.19 194
     description "Afuera"
 }
 
 Viewpoint {
+    position 15 5 150
+    description "Ventana exterior"
+}
+Viewpoint {
+    position 8 1.19 -50
+	orientation 0 1 0 3.14159
+    description "Vista Trasera"
+}
+
+Viewpoint {
     position 0 0.5 70
     orientation 0 1 0 3.14159
-    description "Vista a Nivel del Piso"
+    description "Vista Cortina"
 }
+
 
 # Cámara hacia las ventanas en la pared pequeña
 Viewpoint {
     position -16 14 134
-    orientation 0 -0.5 0 0.785398
-    description "Vista Ventanas en Pared Pequeña"
+    orientation 0 -1.75 0 0.475553
+    description "Vista camara 1"
 }
-
-
-
-# Cámara a nivel del piso (vista más baja)
+# Cámara desde la esquina de la pared con ventana hacia la pared con rejilla
 Viewpoint {
-    position 0 0.5 70
-    orientation 0 1 0 0
-    description "Vista a Nivel del Piso"
+    position 32.67 14 130
+    orientation 1.15 -1.75 -0.5 -0.475553
+    description "Vista camara 2"
 }
-
 
 # Cámara hacia la pizarra en la pared pequeña
 Viewpoint {
     position -14.67 14 12
     orientation 0.1 -1.99 -0.35 2.53553
-    description "Vista a la pizarra en Pared Pequeña"
+    description "Vista camara 3"
 }
 
+# Cámara desde la esquina de la pizarra hacia la puerta
+Viewpoint {
+    position 31.67 14 10
+    orientation 0.1 -1.79 -0.35 3.739553
+    description "Vista camara 4"
+}
 
+Viewpoint {
+    position -14.5 4.48 76.13
+    orientation 0 -1 0 1.5708
+    description "Vista pizarra"
+}
+Viewpoint {
+    position 31.67 1.78 89
+    orientation 0.1 -4 -0.35 3.739553
+    description "Vista puerta interior"
+}
+
+# Plataforma
+Transform {
+  translation 0 -14 0   
+  children [
+    Shape {
+		appearance Appearance {
+        	material Material {
+        	  diffuseColor 0.6 0.6 0.6 
+        	  specularColor 0.70 0.70 0.80
+			  shininess	0.09
+        	}
+      }
+      geometry Box {
+        size 500 1 500  
+      }		   
+    }
+  ]
+}
 
 Inline {
     url "Barraquita.wrl"
