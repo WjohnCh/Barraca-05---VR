@@ -1,0 +1,20 @@
+#VRML V2.0 utf8
+
+# Segunda puerta (derecha)
+Transform {
+  translation 20 0 0  # Ajustar la posición
+  rotation 0 1 0 0  # Rotación eliminada para que la puerta esté plana
+  children [
+    Shape {
+      appearance Appearance {
+		  texture ImageTexture {
+          url "../texturaexterior.jpg"  
+        }
+      }
+      geometry Box {
+        size 9 25 0.10  # Dimensiones de la puerta: Ancho=8, Alto=24, Profundidad=0.1
+      }
+
+    }
+  ]
+}

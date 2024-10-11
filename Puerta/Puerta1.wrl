@@ -1,0 +1,21 @@
+#VRML V2.0 utf8
+
+ # primera puerta (izquierda)
+Transform {
+  translation -10 0 0  
+  rotation 0 1 0 0.5  
+  children [
+    Shape {
+      appearance Appearance {
+		texture ImageTexture {
+          url "../texturaexterior.jpg" 
+        }
+      }
+      geometry Box {
+        size 9 25 0.10  
+      }		   
+    }
+  ]
+}
+
+
