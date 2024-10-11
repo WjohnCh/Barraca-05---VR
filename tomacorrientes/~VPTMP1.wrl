@@ -1,71 +1,122 @@
 #VRML V2.0 utf8
-PROTO BaseEnchufe[
-field SFVec3f translation 0 0 0
-field SFVec3f size 3 2 0.2
-field SFColor color 0.9 0.9 0.9
-]{
+
 Transform{
-translation IS translation
-rotation 0 1 0 1.57 
+translation -18.5 5 70
+scale 5 5 5
 children[
-Shape{
-appearance Appearance{
-material Material{
-diffuseColor IS color
-}
-}
-geometry Box{
-size IS size
-}
+Inline{
+url "Toma1.wrl"
 }
 ]
 }
-}
 
-
-PROTO Conector[
-field SFVec3f translation 0 0 0
-field SFVec3f size 0.05 0.02 0.3 
-]{
 Transform{
-translation IS translation
-rotation 0 0 1 1.57 
+translation -18.5 10 122
+scale 5 5 5
 children[
-Shape{
-appearance Appearance{
-material Material{
-emissiveColor 0.9 0.9 0.9
-diffuseColor 0 0 0
-}
-}
-geometry Box{
-size IS size
-}
+Inline{
+url "Toma2.wrl"
 }
 ]
 }
+
+Transform{
+translation 34 3 110
+scale 5 5 5
+children[
+Inline{
+url "Toma3.wrl"
+}
+]
+}
+
+Transform{
+translation -18.5 -6 70
+scale 1 1 1
+children[
+Inline{
+url "Corriente1.wrl"
+}
+DEF MiSensor TouchSensor{}
+]
+}
+
+Transform{
+translation -18.5 4 122
+scale 1 1 1
+children[
+Inline{
+url "Corriente2.wrl"
+}
+]
+}
+
+Transform{
+translation 34 -10.5 110
+scale 1 1 1
+children[
+
+Inline{
+url "Corriente3.wrl"
+}
+]
 }
 
 
-BaseEnchufe{
-translation 0 0 0
-size 3 2 0.2
-color 0.9 0.9 0.9
+
+PointLight{
+location 18.5 13.2 10
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
 }
-
-BaseEnchufe{
-translation 0 0 0.1
-size 2.5 1.5 0.05
-color 0.8 0.8 0.8
+PointLight{
+location -2.6 13.2 10
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
 }
-
-
-Conector{
-translation 0.2 0.5 0.15 
+PointLight{
+location 18.5 13.2 50
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
 }
-
-
-Conector{
-translation 0.2 -0.5 0.15 
+PointLight{
+location -2.6 13.2 50
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
 }
-
+PointLight{
+location 18.5 13.2 80
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
+}
+PointLight{
+location -2.6 13.2 80
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
+}
+PointLight{
+location 18.5 13.2 110
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
+}
+PointLight{
+location -2.6 13.2 110
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0
+}

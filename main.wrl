@@ -1,7 +1,6 @@
 #VRML V2.0 utf8
 
 # Cámara hacia las ventanas en la pared pequeña
-NavigationInfo { headlight FALSE }
 
 Viewpoint {
     position -16 14 134
@@ -53,10 +52,11 @@ Inline{
 	url "tomacorrientes/tomacorrientes.wrl"
 }
 
-
-
-     
-
-
-
-
+Transform {
+  translation -17 -11.5  128
+  children [
+    Inline {
+      url "CajaConPapeles.wrl"
+    }
+  ]
+}

@@ -47,6 +47,7 @@ Transform {
     Inline {
       url "Corriente2.wrl"
     }
+	DEF interruptor TouchSensor {}
   ]
 }
 
@@ -63,59 +64,89 @@ Transform {
 
 
 
-PointLight { 
-location 18.5 13.2 10
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+
+
+# Definición de las luces
+DEF luz1 PointLight { 
+    location 18.5 13.2 10
+    radius 50
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location  -2.6 13.2 10
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz2 PointLight { 
+    location -2.6 13.2 10
+    radius 50
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location 18.5 13.2 50
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz3 PointLight { 
+    location 18.5 13.2 50
+    radius 50
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location  -2.6 13.2 50
-radius 50
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz4 PointLight { 
+    location -2.6 13.2 50
+    radius 50
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location 18.5 13.2 80
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz5 PointLight { 
+    location 18.5 13.2 80
+    radius 40
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location -2.6 13.2 80
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz6 PointLight { 
+    location -2.6 13.2 80
+    radius 40
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location 18.5 13.2 110
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz7 PointLight { 
+    location 18.5 13.2 110
+    radius 40
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
-PointLight { 
-location -2.6 13.2 110
-radius 40
-ambientIntensity 0.1
-intensity 0.4
-attenuation 0 0 0 
+DEF luz8 PointLight { 
+    location -2.6 13.2 110
+    radius 40
+    ambientIntensity 0.1
+    intensity 0.4
+    attenuation 0 0 0 
 }
+
+DEF MiScript Script {
+    eventIn SFBool click
+    eventOut SFBool lightOn
+
+    field SFBool isOn TRUE
+
+    url "javascript:
+        function click(isActive) {
+            if (isActive) {
+                isOn = !isOn;
+                lightOn = isOn;
+            }
+        }
+    "
+}
+
+ROUTE interruptor.isActive TO MiScript.click
+
+ROUTE MiScript.lightOn TO luz1.on
+ROUTE MiScript.lightOn TO luz2.on
+ROUTE MiScript.lightOn TO luz3.on
+ROUTE MiScript.lightOn TO luz4.on
+ROUTE MiScript.lightOn TO luz5.on
+ROUTE MiScript.lightOn TO luz6.on
+ROUTE MiScript.lightOn TO luz7.on
+ROUTE MiScript.lightOn TO luz8.on
