@@ -1,6 +1,9 @@
 #VRML V2.0 utf8
 
 # Cámara hacia las ventanas en la pared pequeña
+
+NavigationInfo { headlight FALSE }
+
 Viewpoint {
     position -16 14 134
     orientation 0 -0.5 0 0.785398
@@ -16,38 +19,22 @@ Viewpoint {
 }
 
 
-
-Transform {
-    children [
-        Inline {
-            url "Barraquita.wrl"
-        }
-    ]
-}
-Transform {
-    translation 0 0 0
-    children [
-        Inline{
-			url "pizarra.wrl"
-        }
-    ]
-}
-Transform {
-    translation 0 0 0
-    children [
-        Inline{
-			url "Imagenes.wrl"
-        }
-    ]
+Inline {
+    url "Barraquita.wrl"
 }
 
-Transform {
-    translation 0 0 0
-    children [
-        Inline{
-			url "Conjunto_carpetas.wrl"
-        }
-    ]
+Inline{
+	url "pizarra.wrl"
+}
+
+
+Inline{
+	url "Imagenes.wrl"
+}
+
+
+Inline{
+	url "carpeta/Conjunto_carpetas.wrl"
 }
 
 Transform {
@@ -56,5 +43,74 @@ Transform {
         Inline{
 			url "exterior.wrl"
         }
-    ]
+	]
 }
+
+Inline{
+	url "foco/foco.wrl"
+}
+
+
+
+ PointLight { 
+location 18.5 13.2 10
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location  -2.6 13.2 10
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location 18.5 13.2 50
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location  -2.6 13.2 50
+radius 50
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location 18.5 13.2 80
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location -2.6 13.2 80
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location 18.5 13.2 110
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+PointLight { 
+location -2.6 13.2 110
+radius 40
+ambientIntensity 0.1
+intensity 0.4
+attenuation 0 0 0 
+}
+
+     
+
+
+
+

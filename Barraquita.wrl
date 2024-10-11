@@ -78,6 +78,7 @@ PROTO Madera [
         children [
             Shape {
                 appearance Appearance {
+
 					texture	ImageTexture {
 						url	"madera.jpg"
 					}
